@@ -2,18 +2,18 @@
 "use strict";
 // -----------------------------------------------
 // Name: KINN Base
-// Version: 0.1.1 - export
+// Version: 0.1.2 - rename constants
 // Requires Reach v0.1.11-rc7 (27cb9643) or later
 // ----------------------------------------------
 
 // CONSTANTS
 
-export const state = (manager) => ({
+export const baseState = (manager) => ({
   manager,
   closed: false,
 });
 
-export const events = { appLaunch: [], appClose: [] };
+export const baseEvents = { appLaunch: [], appClose: [] };
 
 // FUNCS
 
