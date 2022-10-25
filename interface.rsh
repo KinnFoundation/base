@@ -2,18 +2,18 @@
 "use strict";
 // -----------------------------------------------
 // Name: KINN Base
-// Version: 0.1.0 - add state events
+// Version: 0.1.1 - export
 // Requires Reach v0.1.11-rc7 (27cb9643) or later
 // ----------------------------------------------
 
 // CONSTANTS
 
-const state = (manager) => ({
+export const state = (manager) => ({
   manager,
   closed: false,
 });
 
-const events = { appLaunch: [], appClose: [] };
+export const events = { appLaunch: [], appClose: [] };
 
 // FUNCS
 
