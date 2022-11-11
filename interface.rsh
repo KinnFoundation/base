@@ -2,7 +2,7 @@
 "use strict";
 // -----------------------------------------------
 // Name: KINN Base
-// Version: 0.1.3 - add token state
+// Version: 0.1.4 - add maybe types
 // Requires Reach v0.1.11-rc7 (27cb9643) or later
 // ----------------------------------------------
 
@@ -36,6 +36,10 @@ export const State = Struct([
 ]);
 
 export const Params = Object({});
+
+export const MContract = Maybe(Contract);
+
+export const MAddress = Maybe(Address);
 
 // CONTRACT
 
