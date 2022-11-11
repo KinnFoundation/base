@@ -2,7 +2,7 @@
 "use strict";
 // -----------------------------------------------
 // Name: KINN Base
-// Version: 0.1.5 - add min/max funcs
+// Version: 0.1.6 - add royalty state
 // Requires Reach v0.1.11-rc7 (27cb9643) or later
 // ----------------------------------------------
 
@@ -32,6 +32,12 @@ export const min = (a, b) => (a < b ? a : b);
 export const TokenState = Struct([
   ["token", Token], // token
   ["tokenAmount", UInt], // token amount
+]);
+
+export const RoyaltyState = (distLength) => Struct([
+  ["addrs", Array(Address, distLength)],
+  ["distr", Array(UInt, distLength)],
+  ["royaltyCap", UInt],
 ]);
 
 export const State = Struct([
