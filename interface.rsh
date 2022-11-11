@@ -2,7 +2,7 @@
 "use strict";
 // -----------------------------------------------
 // Name: KINN Base
-// Version: 0.1.6 - add royalty state
+// Version: 0.1.7 - add royalty params
 // Requires Reach v0.1.11-rc7 (27cb9643) or later
 // ----------------------------------------------
 
@@ -44,6 +44,13 @@ export const State = Struct([
   ["manager", Address],
   ["closed", Bool],
 ]);
+
+
+export const RoyaltyParams = (distLength) => Object({
+  addrs: Array(Address, distLength), // [addr, addr, addr, addr, addr, addr, addr, addr, addr, addr]
+  distr: Array(UInt, distLength), // [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  royaltyCap: UInt, // 10
+});
 
 export const Params = Object({});
 
