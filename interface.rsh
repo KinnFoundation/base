@@ -2,7 +2,7 @@
 "use strict";
 // -----------------------------------------------
 // Name: KINN Base
-// Version: 0.1.2 - rename constants
+// Version: 0.1.3 - add token state
 // Requires Reach v0.1.11-rc7 (27cb9643) or later
 // ----------------------------------------------
 
@@ -24,6 +24,11 @@ export const view = (state) => {
 };
 
 // TYPES
+
+export const TokenState = Struct([
+  ["token", Token], // token
+  ["tokenAmount", UInt], // token amount
+]);
 
 export const State = Struct([
   ["manager", Address],
