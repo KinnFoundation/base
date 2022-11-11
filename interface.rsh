@@ -2,7 +2,7 @@
 "use strict";
 // -----------------------------------------------
 // Name: KINN Base
-// Version: 0.1.4 - add maybe types
+// Version: 0.1.5 - add min/max funcs
 // Requires Reach v0.1.11-rc7 (27cb9643) or later
 // ----------------------------------------------
 
@@ -22,6 +22,10 @@ export const view = (state) => {
     state,
   };
 };
+
+export const max = (a, b) => (a > b ? a : b);
+
+export const min = (a, b) => (a < b ? a : b);
 
 // TYPES
 
