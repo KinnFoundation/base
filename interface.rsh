@@ -2,7 +2,7 @@
 "use strict";
 // -----------------------------------------------
 // Name: KINN Base
-// Version: 0.1.7 - add royalty params
+// Version: 0.1.8 - add type, token constract
 // Requires Reach v0.1.11-rc7 (27cb9643) or later
 // ----------------------------------------------
 
@@ -29,6 +29,12 @@ export const min = (a, b) => (a < b ? a : b);
 
 // TYPES
 
+export const MContract = Maybe(Contract);
+
+export const MAddress = Maybe(Address);
+
+export const TokenContract = Tuple(Token, Contract)
+
 export const TokenState = Struct([
   ["token", Token], // token
   ["tokenAmount", UInt], // token amount
@@ -45,7 +51,6 @@ export const State = Struct([
   ["closed", Bool],
 ]);
 
-
 export const RoyaltyParams = (distLength) => Object({
   addrs: Array(Address, distLength), // [addr, addr, addr, addr, addr, addr, addr, addr, addr, addr]
   distr: Array(UInt, distLength), // [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -53,10 +58,6 @@ export const RoyaltyParams = (distLength) => Object({
 });
 
 export const Params = Object({});
-
-export const MContract = Maybe(Contract);
-
-export const MAddress = Maybe(Address);
 
 // CONTRACT
 
