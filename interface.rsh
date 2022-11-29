@@ -2,7 +2,7 @@
 "use strict";
 // -----------------------------------------------
 // Name: KINN Base
-// Version: 0.1.8 - add type, token constract
+// Version: 0.1.9 - add fun
 // Requires Reach v0.1.11-rc7 (27cb9643) or later
 // ----------------------------------------------
 
@@ -58,6 +58,17 @@ export const RoyaltyParams = (distLength) => Object({
 });
 
 export const Params = Object({});
+
+// FUN
+
+const fState = (State) => Fun([], State);
+
+// REMOTE FUN
+
+export const rState = (ctc, State) => {
+  const r = remote(ctc, { state: fState(State) });
+  return r.state();
+};
 
 // CONTRACT
 
