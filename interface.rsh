@@ -2,7 +2,7 @@
 "use strict";
 // -----------------------------------------------
 // Name: KINN Base
-// Version: 0.1.11 - fix triple export
+// Version: 0.1.12 - fix fState export
 // Requires Reach v0.1.11-rc7 (27cb9643) or later
 // ----------------------------------------------
 
@@ -63,7 +63,7 @@ export const Params = Object({});
 
 // FUN
 
-const fState = (State) => Fun([], State);
+export const fState = (State) => Fun([], State);
 
 // REMOTE FUN
 
