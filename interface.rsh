@@ -12,7 +12,7 @@ import {
   view,
   baseState,
   baseEvents
-} from "@KinnFoundation/base#base-v0.1.11r4:interface.rsh";
+} from "@KinnFoundation/base#base-v0.1.11r13:interface.rsh";
 
 // CONSTANTS
 
