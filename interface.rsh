@@ -2,7 +2,7 @@
 "use strict";
 // -----------------------------------------------
 // Name: KINN Base
-// Version: 0.1.10 - add triple
+// Version: 0.1.11 - fix triple export
 // Requires Reach v0.1.11-rc7 (27cb9643) or later
 // ----------------------------------------------
 
@@ -29,7 +29,7 @@ export const min = (a, b) => (a < b ? a : b);
 
 // TYPES
 
-const Triple = (X) => Tuple(X, X, X);
+export const Triple = (X) => Tuple(X, X, X);
 
 export const MContract = Maybe(Contract);
 
