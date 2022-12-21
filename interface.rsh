@@ -2,7 +2,7 @@
 "use strict";
 // -----------------------------------------------
 // Name: KINN Base
-// Version: 0.1.12 - fix fState export
+// Version: 0.1.13 - add MToken
 // Requires Reach v0.1.11-rc7 (27cb9643) or later
 // ----------------------------------------------
 
@@ -30,6 +30,8 @@ export const min = (a, b) => (a < b ? a : b);
 // TYPES
 
 export const Triple = (X) => Tuple(X, X, X);
+
+export const MToken = Maybe(Token);
 
 export const MContract = Maybe(Contract);
 
